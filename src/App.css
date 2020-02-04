@@ -7,4 +7,15 @@ header {
     font-size: 30px;
     text-align: center;
 }
+.collage {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    margin: auto;
+    width: 900px;
+}
+img {
+    margin: 10px;
+}
 /* 7. Write CSS rules that ensure that no more than 4 photos appear on a row */
