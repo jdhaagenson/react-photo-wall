@@ -27,7 +27,7 @@ class App extends Component {
       }));
   }
   render() {
-    const { photos = [] } = this.state;
+    // const { photos = [] } = this.state;
     return (
       <React.Fragment>
         <header>
