@@ -21,9 +21,9 @@ class App extends Component {
   componentDidMount() {
     fetch(PHOTO_LIST_URL)
       .then(response => response.json()
-      .then(responseBody => {
-        console.log(responseBody)
-        this.setState({photos: responseBody});
+      .then(photos => {
+        console.log(photos)
+        this.setState({photos: photos});
       }));
   }
   render() {
@@ -42,9 +42,9 @@ class App extends Component {
            */}
           {this.state.photos.map(photo => (
             <img
-              alt={/* 3. Fill me in with the photo's filename */ photo.filename}
-              key={/* 4. Fill me in with the photo's id */ photo.id}
-              src={/* 5. Fill me in with the photo's URL */ PHOTO_URL(photo.id)}
+              alt={photo.filename}
+              key={photo.id}
+              src={PHOTO_URL(photo.id)}
             />
           ))}
         </div>
